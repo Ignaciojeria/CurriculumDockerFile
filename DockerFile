@@ -1,0 +1,6 @@
+FROM nginx:alpine
+EXPOSE 80
+COPY . /usr/share/nginx/html
+
+#1.- docker build . -t curriculum:latest
+#2.- docker run -d -p 80:80 {idImagen}
