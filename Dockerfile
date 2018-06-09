@@ -12,7 +12,7 @@ COPY bin/uid_entrypoint /bin/uid_entrypoint
 COPY ./index.html /var/run/nginx/html
 COPY ./index.css /var/run/nginx/html
 
-RUN chmod +x /bin/uid_entrypoint
+RUN chmod +x /bin/uid_entrypoint.sh
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV NGINX_VERSION 1.13.8
