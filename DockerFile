@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM  nginx:alpine
 LABEL maintainer="matteo.cappadonna@me.com"
 
 RUN mkdir -p /var/run/nginx /var/log/nginx /var/cache/nginx && \
