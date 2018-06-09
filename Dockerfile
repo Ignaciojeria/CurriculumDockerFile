@@ -1,7 +1,6 @@
 FROM  nginx:alpine
 LABEL maintainer="ignaciovl.j.@gmail.com"
 
-RUN chmod +x /bin/uid_entrypoint
 
 RUN mkdir -p /var/run/nginx /var/log/nginx /var/cache/nginx && \
 	chown -R nginx:0 /var/run/nginx /var/log/nginx /var/cache/nginx && \
@@ -21,8 +20,9 @@ ENV NGINX_VERSION 1.13.8
 
 USER nginx:nginx
 EXPOSE 8000
-
 ENTRYPOINT ["/bin/uid_entrypoint"]
+
+RUN chmod +x /bin/uid_entrypoint
 CMD ["nginx","-g","daemon off;"]
 
 ###  USO
