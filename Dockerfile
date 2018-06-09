@@ -20,9 +20,7 @@ ENV NGINX_VERSION 1.13.8
 
 USER nginx:nginx
 EXPOSE 8000
-ENTRYPOINT ["/bin/uid_entrypoint"]
-
-RUN chmod +x /bin/uid_entrypoint
+ENTRYPOINT ["sh","/bin/uid_entrypoint"]
 CMD ["nginx","-g","daemon off;"]
 
 ###  USO
