@@ -7,9 +7,8 @@ RUN mkdir -p /var/run/nginx /var/log/nginx /var/cache/nginx && \
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
-COPY ./bin/uid_entrypoint /bin/uid_entrypoint
+#COPY ./bin/uid_entrypoint /bin/uid_entrypoint
 
-RUN chmod +x /bin/uid_entrypoint
 
 COPY ./index.html /var/run/nginx/html
 COPY ./index.css /var/run/nginx/html
@@ -20,7 +19,7 @@ ENV NGINX_VERSION 1.13.8
 USER nginx:nginx
 EXPOSE 8000
 
-ENTRYPOINT ["/bin/uid_entrypoint"]
+#ENTRYPOINT ["/bin/uid_entrypoint"]
 CMD ["nginx","-g","daemon off;"]
 
 ###  USO
