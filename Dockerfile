@@ -6,7 +6,7 @@ COPY ./index.css /usr/share/nginx/html
 
 
 EXPOSE 8081
-ENTRYPOINT ["/bin/uid_entrypoint"]
+
 CMD ["nginx","-g","daemon off;"]
 
 ###  USO
