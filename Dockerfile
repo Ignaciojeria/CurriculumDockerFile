@@ -10,8 +10,9 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 #COPY ./bin/uid_entrypoint /bin/uid_entrypoint
 
 
-COPY ./index.html /var/run/nginx/html
-COPY ./index.css /var/run/nginx/html
+
+COPY ./index.html /usr/share/nginx/html
+COPY ./index.css /usr/share/nginx/html
 
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV NGINX_VERSION 1.13.8
